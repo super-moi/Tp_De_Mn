@@ -78,7 +78,11 @@
 	
 	\stepcounter{question_num}
 	\paragraph{Question \arabic{question_num} \\}
-	Cette fonction utilise la fonction précédente pour réduire la taille de la matrice creuse créée. Nous avons mesuré le temps d'execution d'une multiplication entre la matrice et un vecteur. Nous obtenons des résultats trés différents entre L et Ls :
+	Cette fonction utilise la fonction précédente pour réduire la taille de la matrice creuse créée.
+	
+	\stepcounter{question_num}
+	\paragraph{Question \arabic{question_num} \\}
+	 Nous avons mesuré le temps d'execution d'une multiplication entre la matrice et un vecteur. Nous obtenons des résultats trés différents entre L et Ls :
 	\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8 cm]{Comparaison_L_Ls.jpeg}
@@ -90,17 +94,48 @@
 	
 	\stepcounter{question_num}
 	\paragraph{Question \arabic{question_num} \\}
+	Cette fonction prend en argument: la taille de la grille, le temps maximum, les grilles E et R initiale et une fonction. Ainsi cette fonction calcule les $45^{ere}$ grilles E et R (afin de ne pas surcharger la mémoire). Elle résout donc ce probléme approché pendant un petit nombre de pas.
 	
 	\stepcounter{question_num}
 	\paragraph{Question \arabic{question_num} \\}
+	Afin de vérifier la fonction précédente, nous allons la tester avec un systéme dont la solution est :
+	%%u a (x, y, t) = cos(πx) cos(πy)e −t et v a = cos(2πx) cos(2πy)e −t
+	\[
+	\left\{
+	\begin {array}{r c l}
+	u_a(x,y,t)=& cos(\pi x)cos(\pi y)e^{-t}\\
+	u_a(x,y,t)=& cos(2 \pi x)cos(2 \pi y)e^{-t}
+	\end {array}
+	\right.
+	\]
+	
+	On obtient alors le sytéme suivant :
+	\[
+	\left\{
+	\begin {array}{r c l}
+	\frac{de}{dt} =& -e\\
+	\frac{dr}{dt} =& -r
+	\end {array}
+	\right.
+	\]
+	
+	Malheureusement, notre fonction ne semble pas fonctionnée correctement. Nous obtenons des résultats incohérents :
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=8 cm]{question10.jpeg}
+		\caption{ état de $u-{v}$ au temps 2*dt}
+	\end{center}
+	\end{figure}
 	
 	\stepcounter{question_num}
 	\paragraph{Question \arabic{question_num} \\}
-	
-	\stepcounter{question_num}
-	\paragraph{Question \arabic{question_num} \\}
-
-
+	Nous ne pouvons répondre à cette question sans la précedente. Voila néanmoins ce que nous obtenons :
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=8 cm]{question11.jpeg}
+		\caption{}
+	\end{center}
+	\end{figure}
 
 \section{Une méthode d’ordre supérieur }
 
